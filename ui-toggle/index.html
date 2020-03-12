@@ -1,1 +1,49 @@
-
+<link rel="stylesheet" href="./ui-toggle.component.css">
+<div id="uiToggle">
+    <ui-toggle :checked="checked" toggle-color="#f44336">
+        <input type="checkbox" v-model="checked">
+    </ui-toggle>
+    <ui-toggle :checked="checked" toggle-color="#e91e63">
+        <input type="checkbox" v-model="checked">
+    </ui-toggle>
+    <ui-toggle :checked="checked" toggle-color="#9c27b0">
+        <input type="checkbox" v-model="checked">
+    </ui-toggle>
+    <ui-toggle :checked="checked" toggle-color="#673ab7">
+        <input type="checkbox" v-model="checked">
+    </ui-toggle>
+    <ui-toggle :checked="checked" toggle-color="#3f51b5">
+        <input type="checkbox" v-model="checked">
+    </ui-toggle>
+    <ui-toggle :checked="checked" toggle-color="#2196f3">
+        <input type="checkbox" v-model="checked">
+    </ui-toggle>
+    <ui-toggle :checked="checked" toggle-color="#03a9f4">
+        <input type="checkbox" v-model="checked">
+    </ui-toggle>
+    <ui-toggle :checked="checked" toggle-color="#00bcd4">
+        <input type="checkbox" v-model="checked">
+    </ui-toggle>
+    <ui-toggle :checked="checked" toggle-color="#4caf50">
+        <input type="checkbox" v-model="checked">
+    </ui-toggle>
+    <ui-toggle :checked="checked" toggle-color="#ffeb3b">
+        <input type="checkbox" v-model="checked">
+    </ui-toggle>
+    <!-- default -->
+    <ui-toggle :checked="checked">
+        <input type="checkbox" v-model="checked">
+    </ui-toggle>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript" src="./ui-toggle.component.js"></script>
+<script type="text/javascript">
+    (function() {
+        new Vue({
+            el: "#uiToggle",
+            data: {
+                checked: false
+            }
+        });
+    }) ();
+</script>
