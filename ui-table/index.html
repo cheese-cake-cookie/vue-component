@@ -1,10 +1,50 @@
 <link rel="stylesheet" href="./ui-table.component.css">
+<div id="el">
+    <ui-table
+        :header="header"
+        :data="data"
+    ></ui-table>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="./data.js"></script>
 <script src="./ui-table.component.js"></script>
 <script type="text/javascript">
 (function () {
     new Vue({
-
+        el: "#el",
+        data: {
+            header: [['팟캐스트', '제목', '운영자'], "정산상태", "방송명", "운영자", "총캐시수익", "팟빵 매출", "운영자 매출", "소득세", "주민세", "실정산금액", "요청일", "처리일", "신분증", "통장사본"],
+            data: [{
+                "history_id": 81,
+                "podcast": {
+                    "id": 1,
+                    "title": "test 제목 변경 '이건 어때' \"하하\"",
+                    "user": {
+                        "id": 186,
+                        "nickname": "성훈"
+                    }
+                },
+                "state": "CO",
+                "revenue": {
+                    "total": 3000,
+                    "user": 2100,
+                    "podbbang": 900,
+                    "income_tax": 60,
+                    "resident_tax": 0
+                },
+                "payout_info": {
+                    "account": "9BC97CF88A2CC96A0DF03F9A0E0510B4",
+                    "bank": "국민은행",
+                    "depositor": "김미향",
+                    "address": "",
+                    "phone": "",
+                    "jumin": "/jumin/cm_1_3713_1529998071.jpg",
+                    "bankbook": "/bankbook/cm_1_3713_1529998071.png"
+                },
+                "requested_at": "2020-03-12 18:20:18",
+                "paid_at": "2020-03-12"
+            }]
+        }
     });
 }) ();
 </script>

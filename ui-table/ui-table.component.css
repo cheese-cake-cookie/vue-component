@@ -1,0 +1,21 @@
+.pb-table-component {
+    display: block;
+    padding: 0px;
+    overflow: hidden;
+}
+.pb-table-component > .wrap {
+    display: block;
+    overflow: auto;
+}
+.pb-table-component > .wrap .header {
+    display: block;
+    background-color: #f1f1f2;
+    white-space: nowrap;
+}
+.pb-table-component > .wrap .header > div {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 20px;
+}
