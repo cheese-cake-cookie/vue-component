@@ -40,7 +40,7 @@
         template: '' +
             '<label class="ui-toggle" :class="{round: round}">' +
                 '<slot></slot>' +
-                '<span class="slider" :style="sliderStyle"></span>' +
+                '<span class="slider" :style="sliderStyle">on</span>' +
             '</label>'
     });
 }) ();
