@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="./ui-progress.component.css">
+<div id="uiProgress">
+    <ui-progress
+        :process-count="processCount"
+        :proceed-count="proceedCount"
+    ></ui-progress>
+    <button @click="progress">progress 실행</button>
+    <button @click="reset">처음으로</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="./ui-progress.component.js"></script>
+<script type="text/javascript">
+(function() {
+    new Vue({
+        el: "#uiProgress",
+        data: {
+            checked: false,
+            processCount: 10,
+            proceedCount: 0,
+            progressTimeout: null
+        },
+        methods: {
+            reset: function () {
+                this.proceedCount = 0;
+            },
+            progress: function() {
+                var self = this;
+                
+                clearTimeout(this.progressTimeout);
+                this.progressTimeout = null;
+
+                this.progressTimeout = setTimeout(function () {
+                    if (self.proceedCount < self.processCount) {
+                        self.proceedCount += 1;
+                        self.progress();
+                    }
+                }, 100);
+            }
+        }
+    });
+}) ();
+</script>
